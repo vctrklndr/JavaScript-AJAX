@@ -4,19 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ajax</title>
+    <title>Punk Beer</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <header>
-        <h1>PUNK BEER</h1>
-        <div class="inputWrapper">
-            <label for="searchBeer" id="searchBeerLabel">Search beer:</label>
-            <input type="text" id="searchBeer" placeholder="Search here...">
+        <div class="navigation">
+            <h1>PUNK BEER</h1>
+            <div class="inputWrapper">
+                <label for="firstABV">0,5% – 3,5%</label>
+                <input type="checkbox" name="firstABV" id="firstABV">
+
+                <label for="secondABV">3,6% – 5,2%</label>
+                <input type="checkbox" name="secondABV" id="secondABV">
+
+                <label for="thirdABV">5,3% – 12%</label>
+                <input type="checkbox" name="thirdABV" id="thirdABV">
+
+                <label for="fourthABV">12% ></label>
+                <input type="checkbox" name="fourthABV" id="fourthABV">
+            </div>
         </div>
     </header>
     <main>
-        <div id="beerInfo"></div>
+        <div id="beerWrapper">
+
+        </div>
     </main>
     <script src="js/main.js"></script>
 </body>
