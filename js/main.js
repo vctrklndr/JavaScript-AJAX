@@ -2,6 +2,7 @@ const firstABV = document.getElementById('firstABV');
 const secondABV = document.getElementById('secondABV');
 const thirdABV = document.getElementById('thirdABV');
 const fourthABV = document.getElementById('fourthABV');
+const showAll = document.getElementById('showAll');
 const beerWrapper = document.getElementById('beerWrapper');
 
 let globalBeerList = [];
@@ -15,7 +16,7 @@ firstABV.addEventListener('click', function () {
         thirdABV.checked = false;
         fourthABV.checked = false;
     }
-    if(this.checked) {
+    if(this) {
         for(let beer of globalBeerList) {
             if(beer.abv <= 3.5){
                 htmlBlock += `
@@ -48,7 +49,7 @@ secondABV.addEventListener('click', function () {
         thirdABV.checked = false;
         fourthABV.checked = false;
     }
-    if(this.checked) {
+    if(this) {
         for(let beer of globalBeerList) {
             if(beer.abv >= 3.6 && beer.abv <= 5.2){
                 htmlBlock += `
@@ -81,7 +82,7 @@ thirdABV.addEventListener('click', function () {
         secondABV.checked = false;
         fourthABV.checked = false;
     }
-    if(this.checked) {
+    if(this) {
         for(let beer of globalBeerList) {
             if(beer.abv >= 5.3 && beer.abv <= 12){
                 htmlBlock += `
@@ -114,7 +115,7 @@ fourthABV.addEventListener('click', function () {
         secondABV.checked = false;
         thirdABV.checked = false;
     }
-    if(this.checked) {
+    if(this) {
         for(let beer of globalBeerList) {
             if(beer.abv >= 12){
                 htmlBlock += `
@@ -136,6 +137,20 @@ fourthABV.addEventListener('click', function () {
             </div>
             `;
         }
+    }
+    beerWrapper.innerHTML = htmlBlock;
+})
+
+showAll.addEventListener('click', function () {
+    let htmlBlock = '';
+    for (let beer of globalBeerList) {
+        htmlBlock += `
+        <div class="beerInfo">
+            <img src="${beer.image_url}" alt="${beer.name}" />
+            <h2> ${beer.name} </h2>
+            <p> ${beer.abv}% </p>
+        </div>
+        `;
     }
     beerWrapper.innerHTML = htmlBlock;
 })

@@ -8,11 +8,7 @@ body {
     height: 100%;
     font-family: 'Helvetica';
     text-align: center;
-    background-color: #f2f2f2;
-}
-
-input {
-    margin-right: 10px;
+    background-color: #f6f6f6;
 }
 
 header {
@@ -34,15 +30,33 @@ header {
 
 
 .inputWrapper {
-    width: 300px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button {
+    margin: 5px;
+    padding: 5px 10px;
+    width: 120px;
+    height: 40px;
+    font-weight: 900;
+    letter-spacing: 0.05rem;
+    background-color: #fff;
+    border: 2px solid #3583fb;
+    border-radius: 25px;
+    transition: ease 400ms;
+}
+
+button:hover {
+    background-color: #3583fb;
+    cursor: pointer;
 }
 
 h1 {
-    margin: 0;
+    margin: 0 0 20px 0;
     font-family: 'Roboto Mono', monospace;
     font-size: .8rem;
     font-weight: 900;
@@ -158,14 +172,7 @@ label {
     .navigation {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         flex-direction: row;
-    }
-
-    #searchBeer {
-        margin: 0 0;
-    }
-
-    #searchBeer {
-        margin: 10px 0;
     }
 }
