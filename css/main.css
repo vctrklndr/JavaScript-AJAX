@@ -45,13 +45,13 @@ button {
     font-weight: 900;
     letter-spacing: 0.05rem;
     background-color: #fff;
-    border: 2px solid #3583fb;
+    border: 2px solid #13547a;
     border-radius: 25px;
     transition: ease 400ms;
 }
 
 button:hover {
-    background-color: #3583fb;
+    background-color: #13547a;
     cursor: pointer;
 }
 
@@ -101,7 +101,7 @@ label {
 }
 
 .beerInfo {
-    margin: 10px;
+    margin: 15px;
     padding: 20px;
     width: 300px;
     background-color: #fff;
@@ -109,6 +109,8 @@ label {
     -webkit-box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.2);
     -moz-box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.2);
     box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.2);
+    -webkit-animation: fade-in 800ms cubic-bezier(0.390, 0.575, 0.565, 1.000) ;
+    animation: fade-in 800ms cubic-bezier(0.390, 0.575, 0.565, 1.000) ;
 }
 
 .beerInfo > p {
@@ -158,21 +160,44 @@ label {
     }
     40%  { opacity: 0.6; }
     100% { opacity: 1; }
-  }
-  @keyframes tracking-in-expand {
+}
+@keyframes tracking-in-expand {
     0% {
       letter-spacing: -0.5em;
       opacity: 0; 
     }
     40%  { opacity: 0.6; }
     100% { opacity: 1; }
-  }
+}
 
-  @media screen and (min-width: 570px) {
+
+@-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+@media screen and (min-width: 570px) {
     .navigation {
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-direction: row;
+    }
+
+    h1 {
+        margin: 0 0 0 0;
     }
 }
