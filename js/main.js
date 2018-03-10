@@ -9,42 +9,49 @@ let globalBeerList = [];
 
 fetchBeers();
 
-function fetchBeers(){
+// function readMore(){
+//     //removes the link
+//     document.getElementById('readMoreButton').parentElement.removeChild('readMoreButton');
+//     //shows the #more
+//     document.getElementById('readMore').style.display = "block";
+// }
+
+function fetchBeers() {
     fetch('https://api.punkapi.com/v2/beers?page=1&per_page=78')
-        .then(function(response) {
+        .then(function (response) {
             return response.json()
         })
-        .then(function(beers) {
+        .then(function (beers) {
             globalBeerList = beers;
-
-        let htmlBlock = '';
+            
+            let htmlBlock = '';
             for (const beer of beers) {
                 htmlBlock += `
                 <div class="beerInfo">
                     <img src="${beer.image_url}" alt="${beer.name}" />
                     <h2> ${beer.name} </h2>
-                    <p> ${beer.abv}% </p>
+                    <p> ${beer.abv} % </p>
                 </div>
                 `;
             }
             beerWrapper.innerHTML = htmlBlock;
         })
-        .catch(function(error) {
+        .catch(function (error) {
             console.log(error);
         });
 }
 
 firstABV.addEventListener('click', function () {
     let htmlBlock = '';
-    for(let beer of globalBeerList) {
-        if(beer.abv <= 3.5){
+    for (let beer of globalBeerList) {
+        if (beer.abv <= 3.5) {
             htmlBlock += `
             <div class="beerInfo">
                 <img src="${beer.image_url}" alt="${beer.name}" />
                 <h2> ${beer.name} </h2>
                 <p> ${beer.abv}%</p>
             </div>
-        `;
+            `;
         }
     }
     beerWrapper.innerHTML = htmlBlock;
@@ -52,15 +59,15 @@ firstABV.addEventListener('click', function () {
 
 secondABV.addEventListener('click', function () {
     let htmlBlock = '';
-    for(let beer of globalBeerList) {
-        if(beer.abv >= 3.6 && beer.abv <= 5.2){
+    for (let beer of globalBeerList) {
+        if (beer.abv >= 3.6 && beer.abv <= 5.2) {
             htmlBlock += `
             <div class="beerInfo">
                 <img src="${beer.image_url}" alt="${beer.name}" />
                 <h2> ${beer.name} </h2>
                 <p> ${beer.abv}%</p>
             </div>
-        `;
+            `;
         }
     }
     beerWrapper.innerHTML = htmlBlock;
@@ -68,15 +75,15 @@ secondABV.addEventListener('click', function () {
 
 thirdABV.addEventListener('click', function () {
     let htmlBlock = '';
-    for(let beer of globalBeerList) {
-        if(beer.abv >= 5.3 && beer.abv <= 12){
+    for (let beer of globalBeerList) {
+        if (beer.abv >= 5.3 && beer.abv <= 12) {
             htmlBlock += `
             <div class="beerInfo">
                 <img src="${beer.image_url}" alt="${beer.name}" />
                 <h2> ${beer.name} </h2>
                 <p> ${beer.abv}%</p>
             </div>
-        `;
+            `;
         }
     }
     beerWrapper.innerHTML = htmlBlock;
@@ -84,15 +91,15 @@ thirdABV.addEventListener('click', function () {
 
 fourthABV.addEventListener('click', function () {
     let htmlBlock = '';
-    for(let beer of globalBeerList) {
-        if(beer.abv >= 12){
+    for (let beer of globalBeerList) {
+        if (beer.abv >= 12) {
             htmlBlock += `
             <div class="beerInfo">
                 <img src="${beer.image_url}" alt="${beer.name}" />
                 <h2> ${beer.name} </h2>
                 <p> ${beer.abv}%</p>
             </div>
-        `;
+            `;
         }
     }
     beerWrapper.innerHTML = htmlBlock;
