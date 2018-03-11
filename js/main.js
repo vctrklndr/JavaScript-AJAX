@@ -41,8 +41,8 @@ firstABV.addEventListener('click', function () {
             htmlBlock += `
             <div class="beerInfo">
                 <img src="${beer.image_url}" alt="${beer.name}" />
-                <h2> ${beer.name} </h2>
-                <p> ${beer.abv}%</p>
+                <h2> ${beer.name} ${beer.abv}% </h2>
+                <p class="tagline"> "${beer.tagline}" </p>
             </div>
             `;
         }
@@ -57,8 +57,8 @@ secondABV.addEventListener('click', function () {
             htmlBlock += `
             <div class="beerInfo">
                 <img src="${beer.image_url}" alt="${beer.name}" />
-                <h2> ${beer.name} </h2>
-                <p> ${beer.abv}%</p>
+                <h2> ${beer.name} ${beer.abv}% </h2>
+                <p class="tagline"> "${beer.tagline}" </p>
             </div>
             `;
         }
@@ -73,8 +73,8 @@ thirdABV.addEventListener('click', function () {
             htmlBlock += `
             <div class="beerInfo">
                 <img src="${beer.image_url}" alt="${beer.name}" />
-                <h2> ${beer.name} </h2>
-                <p> ${beer.abv}%</p>
+                <h2> ${beer.name} ${beer.abv}% </h2>
+                <p class="tagline"> "${beer.tagline}" </p>
             </div>
             `;
         }
@@ -104,8 +104,8 @@ showAll.addEventListener('click', function () {
         htmlBlock += `
         <div class="beerInfo">
             <img src="${beer.image_url}" alt="${beer.name}" />
-            <h2> ${beer.name} </h2>
-            <p> ${beer.abv}% </p>
+            <h2> ${beer.name} ${beer.abv}% </h2>
+            <p class="tagline"> "${beer.tagline}" </p>
         </div>
         `;
     }
