@@ -9,13 +9,6 @@ let globalBeerList = [];
 
 fetchBeers();
 
-// function readMore(){
-//     //removes the link
-//     document.getElementById('readMoreButton').parentElement.removeChild('readMoreButton');
-//     //shows the #more
-//     document.getElementById('readMore').style.display = "block";
-// }
-
 function fetchBeers() {
     fetch('https://api.punkapi.com/v2/beers?page=1&per_page=78')
         .then(function (response) {
@@ -29,8 +22,8 @@ function fetchBeers() {
                 htmlBlock += `
                 <div class="beerInfo">
                     <img src="${beer.image_url}" alt="${beer.name}" />
-                    <h2> ${beer.name} </h2>
-                    <p> ${beer.abv} % </p>
+                    <h2> ${beer.name} ${beer.abv}% </h2>
+                    <p class="tagline"> "${beer.tagline}" </p>
                 </div>
                 `;
             }
