@@ -5,8 +5,6 @@ const fourthABV = document.getElementById('fourthABV');
 const showAll = document.getElementById('showAll');
 const beerWrapper = document.getElementById('beerWrapper');
 
-
-
 let globalBeerList = [];
 
 fetchBeers();
@@ -29,7 +27,7 @@ function fetchBeers() {
                         <p class="tagline"> "${beer.tagline}" </p>
                         <button id="readMoreButton">Read more</button>
                         <div id="readMore">
-                            <p> ${beer.description} </p>
+                            <p class="description"> ${beer.description} </p>
                         </div>
                     </div>
                     `;

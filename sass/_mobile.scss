@@ -112,17 +112,18 @@ main {
         font-style: italic;
         letter-spacing: .08rem;
     }
-    p.description {
-        font-size: .7rem;
-    }
     img {
         margin: 10px;
         height: 150px;
         -webkit-filter: grayscale(50%);
         filter: grayscale(50%);
     }
-}
-
-#readMore {
-    display: none;
+    #readMore {
+        display: none;
+        p.description {
+            margin-top: 15px;
+            font-size: .7rem;
+            line-height: 1rem;
+        }
+    }
 }
