@@ -1,6 +1,6 @@
 # `Async & API` :satellite:
 
-__Victor Kilander__ | [github.io/JavaScript-AJAX](https://vctrklndr.github.io/JavaScript-AJAX)
+__Victor Kilander__ | [GitHub Pages](https://vctrklndr.github.io/JavaScript-AJAX) / [GitHub Repository](https://github.com/vctrklndr/JavaScript-AJAX)
 
 ## `About`
 A small beer application where you can read description about different beers from __Brewdog__ brewery and can sort them by ABV (alcohol by volume).
