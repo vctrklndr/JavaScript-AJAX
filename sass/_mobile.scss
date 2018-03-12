@@ -75,7 +75,7 @@ main {
     flex-direction: column;
     p {
         margin: 0 0 10px 0;
-        font-size: .6rem;
+        font-size: .7rem;
         letter-spacing: .05rem;
     }
 }
@@ -85,6 +85,13 @@ main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+#loading {
+    margin-top: 50px;
+    height: 100px;
+    -webkit-animation: rotate-center 1s linear infinite both;
+	        animation: rotate-center 1s linear infinite both;
 }
 
 .beerInfo {
