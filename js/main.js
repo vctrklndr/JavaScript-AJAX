@@ -16,10 +16,10 @@ function fetchBeers() {
         })
         .then(function (beers) {
             globalBeerList = beers;
-            
+
             let htmlBlock = '';
             for (const beer of beers) {
-                if(beer.image_url != "https://images.punkapi.com/v2/keg.png"){
+                if (beer.image_url != "https://images.punkapi.com/v2/keg.png") {
                     htmlBlock += `
                     <div class="beerInfo">
                         <img src="${beer.image_url}" alt="${beer.name}" />
@@ -108,7 +108,7 @@ fourthABV.addEventListener('click', function () {
 showAll.addEventListener('click', function () {
     let htmlBlock = '';
     for (let beer of globalBeerList) {
-        if(beer.image_url != "https://images.punkapi.com/v2/keg.png") {
+        if (beer.image_url != "https://images.punkapi.com/v2/keg.png") {
             htmlBlock += `
             <div class="beerInfo">
                 <img src="${beer.image_url}" alt="${beer.name}" />
