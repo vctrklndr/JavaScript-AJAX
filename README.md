@@ -1,2 +1,2 @@
-Ajax
+AJAX
 <br />Victor Kilander
