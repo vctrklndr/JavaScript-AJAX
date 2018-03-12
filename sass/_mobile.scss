@@ -87,6 +87,13 @@ main {
     flex-wrap: wrap;
 }
 
+#loading {
+    margin-top: 50px;
+    height: 100px;
+    -webkit-animation: rotate-center 1s linear infinite both;
+	        animation: rotate-center 1s linear infinite both;
+}
+
 .beerInfo {
     margin: 15px;
     padding: 20px;
