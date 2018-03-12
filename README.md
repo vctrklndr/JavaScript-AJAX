@@ -1,2 +1,1 @@
-##Ajax
-<br />Victor Kilander
+Victor Kilander
