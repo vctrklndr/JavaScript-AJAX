@@ -8,7 +8,7 @@ body {
     height: 100%;
     font-family: 'Roboto Mono', monospace;
     text-align: center;
-    background-color: #f6f6f6;
+    background-color: #f2f2f2;
 }
 
 header {
@@ -17,8 +17,6 @@ header {
     background-color: #fff;
     border-bottom: 1px solid #dedede;
     opacity: .80;
-    // position: fixed;
-    // z-index: 1;
 }
 
 .navigation {
@@ -30,7 +28,7 @@ header {
         margin: 0;
         font-family: 'Roboto Mono', monospace;
         font-size: .8rem;
-        font-weight: 900;
+        font-weight: 700;
         text-transform: uppercase;
         letter-spacing: .02rem;
         background-image: linear-gradient(15deg, #13547a 0%, #00afdb 100%);
@@ -60,7 +58,7 @@ header {
         width: 110px;
         height: 35px;
         font-family: 'Roboto Mono', monospace;
-        font-weight: 900;
+        font-weight: 700;
         background-color: transparent;
         border: 2px solid #00afdb;
         border-radius: 25px;
@@ -95,7 +93,7 @@ main {
 .beerInfo {
     margin: 15px;
     padding: 20px;
-    width: 300px;
+    width: 100%;
     background-color: #fff;
     border-radius: 15px;
     -webkit-box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.2);
@@ -120,5 +118,11 @@ main {
     img {
         margin: 10px;
         height: 150px;
+        -webkit-filter: grayscale(50%);
+        filter: grayscale(50%);
     }
+}
+
+#readMore {
+    display: none;
 }
