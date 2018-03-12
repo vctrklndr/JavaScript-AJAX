@@ -1,9 +1,7 @@
-.navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    h1 {
-        margin: 0 0 15px 0;
+.buttonWrapper {
+    button:hover {
+        color: #fff;
+        background-color: #00afdb;
+        cursor: pointer;
     }
 }

@@ -5,6 +5,7 @@ html {
 body {
     margin: 0;
     width: 100%;
+    min-width: 320px;
     height: 100%;
     font-family: 'Roboto Mono', monospace;
     text-align: center;
@@ -59,15 +60,11 @@ header {
         height: 35px;
         font-family: 'Roboto Mono', monospace;
         font-weight: 700;
+        letter-spacing: .02rem;
         background-color: transparent;
         border: 2px solid #00afdb;
         border-radius: 25px;
         transition: ease 400ms;
-    }
-    button:hover {
-        color: #fff;
-        background-color: #00afdb;
-        cursor: pointer;
     }
 }
 
@@ -107,23 +104,22 @@ main {
     }
     p.tagline {
         margin: 5px;
+        padding-bottom: 10px;
         font-size: .7rem;
         font-weight: 300;
         font-style: italic;
         letter-spacing: .08rem;
+        border-bottom: 1px solid #f2f2f2;
+    }
+    p.description {
+        margin-top: 10px;
+        font-size: .7rem;
+        line-height: 1rem;
     }
     img {
         margin: 10px;
         height: 150px;
         -webkit-filter: grayscale(50%);
         filter: grayscale(50%);
-    }
-    #readMore {
-        display: none;
-        p.description {
-            margin-top: 15px;
-            font-size: .7rem;
-            line-height: 1rem;
-        }
     }
 }

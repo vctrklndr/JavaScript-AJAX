@@ -25,19 +25,9 @@ function fetchBeers() {
                         <img src="${beer.image_url}" alt="${beer.name}" />
                         <h2> ${beer.name} ${beer.abv}% </h2>
                         <p class="tagline"> "${beer.tagline}" </p>
-                        <button id="readMoreButton">Read more</button>
-                        <div id="readMore">
-                            <p class="description"> ${beer.description} </p>
-                        </div>
+                        <p class="description"> ${beer.description} </p>
                     </div>
                     `;
-                    setTimeout(function(){
-                        readMoreButton = document.getElementById('readMoreButton');
-                        readMoreButton.addEventListener('click', function(){
-                            readMore = document.getElementById('readMore').style.display = "block";
-                            readMoreButton.remove();
-                        })
-                     });
                 }
             }
             beerWrapper.innerHTML = htmlBlock;
@@ -56,6 +46,7 @@ firstABV.addEventListener('click', function () {
                 <img src="${beer.image_url}" alt="${beer.name}" />
                 <h2> ${beer.name} ${beer.abv}% </h2>
                 <p class="tagline"> "${beer.tagline}" </p>
+                <p class="description"> ${beer.description} </p>
             </div>
             `;
         }
@@ -72,6 +63,7 @@ secondABV.addEventListener('click', function () {
                 <img src="${beer.image_url}" alt="${beer.name}" />
                 <h2> ${beer.name} ${beer.abv}% </h2>
                 <p class="tagline"> "${beer.tagline}" </p>
+                <p class="description"> ${beer.description} </p>
             </div>
             `;
         }
@@ -88,6 +80,7 @@ thirdABV.addEventListener('click', function () {
                 <img src="${beer.image_url}" alt="${beer.name}" />
                 <h2> ${beer.name} ${beer.abv}% </h2>
                 <p class="tagline"> "${beer.tagline}" </p>
+                <p class="description"> ${beer.description} </p>
             </div>
             `;
         }
@@ -98,12 +91,13 @@ thirdABV.addEventListener('click', function () {
 fourthABV.addEventListener('click', function () {
     let htmlBlock = '';
     for (let beer of globalBeerList) {
-        if (beer.abv >= 12) {
+        if (beer.abv >= 12 && beer.image_url != "https://images.punkapi.com/v2/keg.png") {
             htmlBlock += `
             <div class="beerInfo">
                 <img src="${beer.image_url}" alt="${beer.name}" />
                 <h2> ${beer.name} ${beer.abv}% </h2>
                 <p class="tagline"> "${beer.tagline}" </p>
+                <p class="description"> ${beer.description} </p>
             </div>
             `;
         }
@@ -120,6 +114,7 @@ showAll.addEventListener('click', function () {
                 <img src="${beer.image_url}" alt="${beer.name}" />
                 <h2> ${beer.name} ${beer.abv}% </h2>
                 <p class="tagline"> "${beer.tagline}" </p>
+                <p class="description"> ${beer.description} </p>
             </div>
             `;
         }
