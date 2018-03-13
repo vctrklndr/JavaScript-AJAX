@@ -3,6 +3,7 @@ const secondABV = document.getElementById('secondABV');
 const thirdABV = document.getElementById('thirdABV');
 const fourthABV = document.getElementById('fourthABV');
 const showAll = document.getElementById('showAll');
+const searchFood = document.getElementById('searchFood');
 const beerWrapper = document.getElementById('beerWrapper');
 
 // Array that fills up with fetched beers when fetch is completed
@@ -32,6 +33,10 @@ function fetchBeers() {
                         <h2> ${beer.name} ${beer.abv}% </h2>
                         <p class="tagline"> "${beer.tagline}" </p>
                         <p class="description"> ${beer.description} </p>
+                        <h3> Food pairings: </h3>
+                        <p> - ${beer.food_pairing[0]}
+                        <br /> - ${beer.food_pairing[1]}
+                        <br /> - ${beer.food_pairing[2]} </p>
                     </div>
                     `;
                 }
@@ -56,6 +61,10 @@ firstABV.addEventListener('click', function () {
                 <h2> ${beer.name} ${beer.abv}% </h2>
                 <p class="tagline"> "${beer.tagline}" </p>
                 <p class="description"> ${beer.description} </p>
+                <h3> Food pairings: </h3>
+                <p> - ${beer.food_pairing[0]}
+                <br /> - ${beer.food_pairing[1]}
+                <br /> - ${beer.food_pairing[2]} </p>
             </div>
             `;
         }
@@ -75,6 +84,10 @@ secondABV.addEventListener('click', function () {
                 <h2> ${beer.name} ${beer.abv}% </h2>
                 <p class="tagline"> "${beer.tagline}" </p>
                 <p class="description"> ${beer.description} </p>
+                <h3> Food pairings: </h3>
+                <p> - ${beer.food_pairing[0]}
+                <br /> - ${beer.food_pairing[1]}
+                <br /> - ${beer.food_pairing[2]} </p>
             </div>
             `;
         }
@@ -94,6 +107,10 @@ thirdABV.addEventListener('click', function () {
                 <h2> ${beer.name} ${beer.abv}% </h2>
                 <p class="tagline"> "${beer.tagline}" </p>
                 <p class="description"> ${beer.description} </p>
+                <h3> Food pairings: </h3>
+                <p> - ${beer.food_pairing[0]}
+                <br /> - ${beer.food_pairing[1]}
+                <br /> - ${beer.food_pairing[2]} </p>
             </div>
             `;
         }
@@ -113,6 +130,10 @@ fourthABV.addEventListener('click', function () {
                 <h2> ${beer.name} ${beer.abv}% </h2>
                 <p class="tagline"> "${beer.tagline}" </p>
                 <p class="description"> ${beer.description} </p>
+                <h3> Food pairings: </h3>
+                <p> - ${beer.food_pairing[0]}
+                <br /> - ${beer.food_pairing[1]}
+                <br /> - ${beer.food_pairing[2]} </p>
             </div>
             `;
         }
@@ -131,9 +152,36 @@ showAll.addEventListener('click', function () {
                 <h2> ${beer.name} ${beer.abv}% </h2>
                 <p class="tagline"> "${beer.tagline}" </p>
                 <p class="description"> ${beer.description} </p>
+                <h3> Food pairings: </h3>
+                <p> - ${beer.food_pairing[0]}
+                <br /> - ${beer.food_pairing[1]}
+                <br /> - ${beer.food_pairing[2]} </p>
             </div>
             `;
         }
     }
+    beerWrapper.innerHTML = htmlBlock;
+})
+
+searchFood.addEventListener('change', function(){
+    const searchValue = searchFood.value;
+    let htmlBlock = '';
+    for (let beer of globalBeerList) { // includes || contains
+        if(beer.food_pairing.includes(searchValue) && beer.image_url != "https://images.punkapi.com/v2/keg.png") {
+            htmlBlock += `
+            <div class="beerInfo">
+                <img src="${beer.image_url}" alt="${beer.name}" />
+                <h2> ${beer.name} ${beer.abv}% </h2>
+                <p class="tagline"> "${beer.tagline}" </p>
+                <p class="description"> ${beer.description} </p>
+                <h3> Food pairings: </h3>
+                <p> - ${beer.food_pairing[0]}
+                <br /> - ${beer.food_pairing[1]}
+                <br /> - ${beer.food_pairing[2]} </p>
+            </div>
+            `;
+        }
+    }
+    document.getElementById('searchFood').value = '';
     beerWrapper.innerHTML = htmlBlock;
 })

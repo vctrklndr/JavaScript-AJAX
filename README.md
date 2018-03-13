@@ -6,9 +6,7 @@ __Victor Kilander__ | [GitHub Pages](https://vctrklndr.github.io/JavaScript-AJAX
 A small beer application where you can read descriptions about different beers from __Brewdog__ brewery and sort them by ABV (alcohol by volume).
 
 ## `Technologies used`
-- ```fetch``` (to fetch the API)
-- ```for``` -loops
-- ```eventListeners```
+None.
 
 ## `About the API` :beer:
 I've used the [Punk API](https://punkapi.com) which holds the whole Brewdog beer catalogue. 
