@@ -34,9 +34,11 @@ function fetchBeers() {
                         <p class="tagline"> "${beer.tagline}" </p>
                         <p class="description"> ${beer.description} </p>
                         <h3> Food pairings: </h3>
-                        <p> - ${beer.food_pairing[0]}
-                        <br /> - ${beer.food_pairing[1]}
-                        <br /> - ${beer.food_pairing[2]} </p>
+                        <ul>
+                            <li>${beer.food_pairing[0]}</li>
+                            <li>${beer.food_pairing[1]}</li>
+                            <li>${beer.food_pairing[2]}</li>
+                        </ul>
                     </div>
                     `;
                 }
@@ -62,9 +64,11 @@ firstABV.addEventListener('click', function () {
                 <p class="tagline"> "${beer.tagline}" </p>
                 <p class="description"> ${beer.description} </p>
                 <h3> Food pairings: </h3>
-                <p> - ${beer.food_pairing[0]}
-                <br /> - ${beer.food_pairing[1]}
-                <br /> - ${beer.food_pairing[2]} </p>
+                <ul>
+                    <li>${beer.food_pairing[0]}</li>
+                    <li>${beer.food_pairing[1]}</li>
+                    <li>${beer.food_pairing[2]}</li>
+                </ul>
             </div>
             `;
         }
@@ -85,9 +89,11 @@ secondABV.addEventListener('click', function () {
                 <p class="tagline"> "${beer.tagline}" </p>
                 <p class="description"> ${beer.description} </p>
                 <h3> Food pairings: </h3>
-                <p> - ${beer.food_pairing[0]}
-                <br /> - ${beer.food_pairing[1]}
-                <br /> - ${beer.food_pairing[2]} </p>
+                <ul>
+                    <li>${beer.food_pairing[0]}</li>
+                    <li>${beer.food_pairing[1]}</li>
+                    <li>${beer.food_pairing[2]}</li>
+                </ul>
             </div>
             `;
         }
@@ -108,9 +114,11 @@ thirdABV.addEventListener('click', function () {
                 <p class="tagline"> "${beer.tagline}" </p>
                 <p class="description"> ${beer.description} </p>
                 <h3> Food pairings: </h3>
-                <p> - ${beer.food_pairing[0]}
-                <br /> - ${beer.food_pairing[1]}
-                <br /> - ${beer.food_pairing[2]} </p>
+                <ul>
+                    <li>${beer.food_pairing[0]}</li>
+                    <li>${beer.food_pairing[1]}</li>
+                    <li>${beer.food_pairing[2]}</li>
+                </ul>
             </div>
             `;
         }
@@ -131,9 +139,11 @@ fourthABV.addEventListener('click', function () {
                 <p class="tagline"> "${beer.tagline}" </p>
                 <p class="description"> ${beer.description} </p>
                 <h3> Food pairings: </h3>
-                <p> - ${beer.food_pairing[0]}
-                <br /> - ${beer.food_pairing[1]}
-                <br /> - ${beer.food_pairing[2]} </p>
+                <ul>
+                    <li>${beer.food_pairing[0]}</li>
+                    <li>${beer.food_pairing[1]}</li>
+                    <li>${beer.food_pairing[2]}</li>
+                </ul>
             </div>
             `;
         }
@@ -153,9 +163,11 @@ showAll.addEventListener('click', function () {
                 <p class="tagline"> "${beer.tagline}" </p>
                 <p class="description"> ${beer.description} </p>
                 <h3> Food pairings: </h3>
-                <p> - ${beer.food_pairing[0]}
-                <br /> - ${beer.food_pairing[1]}
-                <br /> - ${beer.food_pairing[2]} </p>
+                <ul>
+                    <li>${beer.food_pairing[0]}</li>
+                    <li>${beer.food_pairing[1]}</li>
+                    <li>${beer.food_pairing[2]}</li>
+                </ul>
             </div>
             `;
         }
@@ -171,7 +183,7 @@ searchFood.addEventListener('change', function(){
         for (let food_pairing of beer.food_pairing) {
             /* Checks if the search value exists in the food pairing array
             * and then loops out the matching values */
-            if(food_pairing.includes(searchValue) &&
+            if(food_pairing.toLowerCase().includes(searchValue) &&
             beer.image_url != "https://images.punkapi.com/v2/keg.png") {
                 htmlBlock += `
                 <div class="beerInfo">
@@ -180,9 +192,11 @@ searchFood.addEventListener('change', function(){
                     <p class="tagline"> "${beer.tagline}" </p>
                     <p class="description"> ${beer.description} </p>
                     <h3> Food pairings: </h3>
-                    <p> - ${beer.food_pairing[0]}
-                    <br /> - ${beer.food_pairing[1]}
-                    <br /> - ${beer.food_pairing[2]} </p>
+                    <ul>
+                        <li>${beer.food_pairing[0]}</li>
+                        <li>${beer.food_pairing[1]}</li>
+                        <li>${beer.food_pairing[2]}</li>
+                    </ul>
                 </div>
                 `;
             }
