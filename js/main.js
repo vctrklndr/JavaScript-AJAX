@@ -167,7 +167,8 @@ searchFood.addEventListener('change', function(){
     const searchValue = searchFood.value;
     let htmlBlock = '';
     for (let beer of globalBeerList) { // includes || contains
-        if(beer.food_pairing.includes(searchValue) && beer.image_url != "https://images.punkapi.com/v2/keg.png") {
+        if(beer.food_pairing[0].includes(searchValue) &&
+        beer.image_url != "https://images.punkapi.com/v2/keg.png") {
             htmlBlock += `
             <div class="beerInfo">
                 <img src="${beer.image_url}" alt="${beer.name}" />
