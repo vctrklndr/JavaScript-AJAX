@@ -5,8 +5,10 @@ const fourthABV = document.getElementById('fourthABV');
 const showAll = document.getElementById('showAll');
 const beerWrapper = document.getElementById('beerWrapper');
 
+// Array that fills up with fetched beers when fetch is completed
 let globalBeerList = [];
 
+// Fetches the beers to beerWrapper
 fetchBeers();
 
 function fetchBeers() {
@@ -15,10 +17,13 @@ function fetchBeers() {
             return response.json()
         })
         .then(function (beers) {
+            // Stores the beers globally
             globalBeerList = beers;
 
+            // Loops through all the beers
             let htmlBlock = '';
             for (const beer of beers) {
+                // Loops out all beers that doesn't have the keg.png image
                 if (beer.image_url != "https://images.punkapi.com/v2/keg.png") {
                     htmlBlock += `
                     <div class="beerInfo">
@@ -38,8 +43,11 @@ function fetchBeers() {
 }
 
 firstABV.addEventListener('click', function () {
+    // Loops through all the beers
     let htmlBlock = '';
     for (let beer of globalBeerList) {
+        /* Loops out beers that has an ABV less or equals 
+         * to 4.5 and doesn't have the keg.png image */
         if (beer.abv <= 4.5 && beer.image_url != "https://images.punkapi.com/v2/keg.png") {
             htmlBlock += `
             <div class="beerInfo">
@@ -57,6 +65,8 @@ firstABV.addEventListener('click', function () {
 secondABV.addEventListener('click', function () {
     let htmlBlock = '';
     for (let beer of globalBeerList) {
+        /* Loops out beers that has an ABV more or equals 
+         * to 4.5, less than 7 and doesn't have the keg.png image */
         if (beer.abv >= 4.5 && beer.abv <= 7 && beer.image_url != "https://images.punkapi.com/v2/keg.png") {
             htmlBlock += `
             <div class="beerInfo">
@@ -74,6 +84,8 @@ secondABV.addEventListener('click', function () {
 thirdABV.addEventListener('click', function () {
     let htmlBlock = '';
     for (let beer of globalBeerList) {
+        /* Loops out beers that has an ABV more or equals 
+         * to 7, less than 12 and doesn't have the keg.png image */
         if (beer.abv >= 7 && beer.abv <= 12 && beer.image_url != "https://images.punkapi.com/v2/keg.png") {
             htmlBlock += `
             <div class="beerInfo">
@@ -91,6 +103,8 @@ thirdABV.addEventListener('click', function () {
 fourthABV.addEventListener('click', function () {
     let htmlBlock = '';
     for (let beer of globalBeerList) {
+        /* Loops out beers that has an ABV more or equals 
+         * to 12 and doesn't have the keg.png image */
         if (beer.abv >= 12 && beer.image_url != "https://images.punkapi.com/v2/keg.png") {
             htmlBlock += `
             <div class="beerInfo">
@@ -108,6 +122,7 @@ fourthABV.addEventListener('click', function () {
 showAll.addEventListener('click', function () {
     let htmlBlock = '';
     for (let beer of globalBeerList) {
+        // Loops out all beers that doesn't have the keg.png image
         if (beer.image_url != "https://images.punkapi.com/v2/keg.png") {
             htmlBlock += `
             <div class="beerInfo">
