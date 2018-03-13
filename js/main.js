@@ -166,21 +166,26 @@ showAll.addEventListener('click', function () {
 searchFood.addEventListener('change', function(){
     const searchValue = searchFood.value;
     let htmlBlock = '';
-    for (let beer of globalBeerList) { // includes || contains
-        if(beer.food_pairing[0].includes(searchValue) &&
-        beer.image_url != "https://images.punkapi.com/v2/keg.png") {
-            htmlBlock += `
-            <div class="beerInfo">
-                <img src="${beer.image_url}" alt="${beer.name}" />
-                <h2> ${beer.name} ${beer.abv}% </h2>
-                <p class="tagline"> "${beer.tagline}" </p>
-                <p class="description"> ${beer.description} </p>
-                <h3> Food pairings: </h3>
-                <p> - ${beer.food_pairing[0]}
-                <br /> - ${beer.food_pairing[1]}
-                <br /> - ${beer.food_pairing[2]} </p>
-            </div>
-            `;
+    for (let beer of globalBeerList) {
+        // Loops through the food pairing array
+        for (let food_pairing of beer.food_pairing) {
+            /* Checks if the search value exists in the food pairing array
+            * and then loops out the matching values */
+            if(food_pairing.includes(searchValue) &&
+            beer.image_url != "https://images.punkapi.com/v2/keg.png") {
+                htmlBlock += `
+                <div class="beerInfo">
+                    <img src="${beer.image_url}" alt="${beer.name}" />
+                    <h2> ${beer.name} ${beer.abv}% </h2>
+                    <p class="tagline"> "${beer.tagline}" </p>
+                    <p class="description"> ${beer.description} </p>
+                    <h3> Food pairings: </h3>
+                    <p> - ${beer.food_pairing[0]}
+                    <br /> - ${beer.food_pairing[1]}
+                    <br /> - ${beer.food_pairing[2]} </p>
+                </div>
+                `;
+            }
         }
     }
     document.getElementById('searchFood').value = '';
