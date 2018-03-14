@@ -176,7 +176,7 @@ showAll.addEventListener('click', function () {
 })
 
 searchFood.addEventListener('change', function(){
-    const searchValue = searchFood.value;
+    const searchValue = searchFood.value.toLowerCase();
     let htmlBlock = '';
     /* If input field is sent with a blank space or if input
      * string length is less than 4 a error message is sent */
