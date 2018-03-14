@@ -189,10 +189,10 @@ searchFood.addEventListener('change', function(){
     } else {
         for (let beer of globalBeerList) {
             // Loops through the food pairing array
-            for (let food_pairing of beer.food_pairing) {
+            for (let foodPairing of beer.food_pairing) {
                 /* Checks if the search value exists in the food pairing array
-                * and then loops out the matching values */
-                if(food_pairing.toLowerCase().includes(searchValue) &&
+                 * and then loops out the matching values */
+                if(foodPairing.toLowerCase().includes(searchValue) &&
                 beer.image_url != "https://images.punkapi.com/v2/keg.png") {
                     htmlBlock += `
                     <div class="beerInfo">
