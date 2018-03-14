@@ -159,6 +159,19 @@ main {
     }
 }
 
+.notAllowed {
+    margin-top: 20px;
+    padding: 20px;
+    font-weight: 300;
+    background-color: #f3b93c;
+    border-radius: 15px;
+    -webkit-animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) ;
+	        animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) ;
+    p {
+        margin: 0;
+    }
+}
+
 footer {
     margin: 20px 0 50px;
     font-size: .5rem;

@@ -178,27 +178,37 @@ showAll.addEventListener('click', function () {
 searchFood.addEventListener('change', function(){
     const searchValue = searchFood.value;
     let htmlBlock = '';
-    for (let beer of globalBeerList) {
-        // Loops through the food pairing array
-        for (let food_pairing of beer.food_pairing) {
-            /* Checks if the search value exists in the food pairing array
-            * and then loops out the matching values */
-            if(food_pairing.toLowerCase().includes(searchValue) &&
-            beer.image_url != "https://images.punkapi.com/v2/keg.png") {
-                htmlBlock += `
-                <div class="beerInfo">
-                    <img src="${beer.image_url}" alt="${beer.name}" />
-                    <h2> ${beer.name} ${beer.abv}% </h2>
-                    <p class="tagline"> "${beer.tagline}" </p>
-                    <p class="description"> ${beer.description} </p>
-                    <h3> Food pairings: </h3>
-                    <ul>
-                        <li>${beer.food_pairing[0]}</li>
-                        <li>${beer.food_pairing[1]}</li>
-                        <li>${beer.food_pairing[2]}</li>
-                    </ul>
-                </div>
-                `;
+    /* If input field is sent with a blank space or if input
+     * string length is less than 4 a error message is sent */
+    if(searchValue === " " | searchValue.length < 4){
+        htmlBlock += `
+        <div class="notAllowed">
+            <p> Please search with at least 4 characters </p>
+        </div>
+        `;
+    } else {
+        for (let beer of globalBeerList) {
+            // Loops through the food pairing array
+            for (let food_pairing of beer.food_pairing) {
+                /* Checks if the search value exists in the food pairing array
+                * and then loops out the matching values */
+                if(food_pairing.toLowerCase().includes(searchValue) &&
+                beer.image_url != "https://images.punkapi.com/v2/keg.png") {
+                    htmlBlock += `
+                    <div class="beerInfo">
+                        <img src="${beer.image_url}" alt="${beer.name}" />
+                        <h2> ${beer.name} ${beer.abv}% </h2>
+                        <p class="tagline"> "${beer.tagline}" </p>
+                        <p class="description"> ${beer.description} </p>
+                        <h3> Food pairings: </h3>
+                        <ul>
+                            <li>${beer.food_pairing[0]}</li>
+                            <li>${beer.food_pairing[1]}</li>
+                            <li>${beer.food_pairing[2]}</li>
+                        </ul>
+                    </div>
+                    `;
+                }
             }
         }
     }
