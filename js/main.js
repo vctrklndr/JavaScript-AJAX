@@ -28,18 +28,18 @@ function fetchBeers() {
                 // Loops out all beers that doesn't have the keg.png image
                 if (beer.image_url != "https://images.punkapi.com/v2/keg.png") {
                     htmlBlock += `
-                    <div class="beerInfo">
-                        <img src="${beer.image_url}" alt="${beer.name}" />
-                        <h2> ${beer.name} ${beer.abv}% </h2>
-                        <p class="tagline"> "${beer.tagline}" </p>
-                        <p class="description"> ${beer.description} </p>
-                        <h3> Food pairings: </h3>
-                        <ul>
-                            <li>${beer.food_pairing[0]}</li>
-                            <li>${beer.food_pairing[1]}</li>
-                            <li>${beer.food_pairing[2]}</li>
-                        </ul>
-                    </div>
+                        <div class="beerInfo">
+                            <img src="${beer.image_url}" alt="${beer.name}" />
+                            <h2> ${beer.name} ${beer.abv}% </h2>
+                            <p class="tagline"> "${beer.tagline}" </p>
+                            <p class="description"> ${beer.description} </p>
+                            <h3> Food pairings: </h3>
+                            <ul>
+                                <li>${beer.food_pairing[0]}</li>
+                                <li>${beer.food_pairing[1]}</li>
+                                <li>${beer.food_pairing[2]}</li>
+                            </ul>
+                        </div>
                     `;
                 }
             }
@@ -58,18 +58,18 @@ firstABV.addEventListener('click', function () {
          * to 4.5 and doesn't have the keg.png image */
         if (beer.abv <= 4.5 && beer.image_url != "https://images.punkapi.com/v2/keg.png") {
             htmlBlock += `
-            <div class="beerInfo">
-                <img src="${beer.image_url}" alt="${beer.name}" />
-                <h2> ${beer.name} ${beer.abv}% </h2>
-                <p class="tagline"> "${beer.tagline}" </p>
-                <p class="description"> ${beer.description} </p>
-                <h3> Food pairings: </h3>
-                <ul>
-                    <li>${beer.food_pairing[0]}</li>
-                    <li>${beer.food_pairing[1]}</li>
-                    <li>${beer.food_pairing[2]}</li>
-                </ul>
-            </div>
+                <div class="beerInfo">
+                    <img src="${beer.image_url}" alt="${beer.name}" />
+                    <h2> ${beer.name} ${beer.abv}% </h2>
+                    <p class="tagline"> "${beer.tagline}" </p>
+                    <p class="description"> ${beer.description} </p>
+                    <h3> Food pairings: </h3>
+                    <ul>
+                        <li>${beer.food_pairing[0]}</li>
+                        <li>${beer.food_pairing[1]}</li>
+                        <li>${beer.food_pairing[2]}</li>
+                    </ul>
+                </div>
             `;
         }
     }
@@ -83,18 +83,18 @@ secondABV.addEventListener('click', function () {
          * to 4.5, less than 7 and doesn't have the keg.png image */
         if (beer.abv >= 4.5 && beer.abv <= 7 && beer.image_url != "https://images.punkapi.com/v2/keg.png") {
             htmlBlock += `
-            <div class="beerInfo">
-                <img src="${beer.image_url}" alt="${beer.name}" />
-                <h2> ${beer.name} ${beer.abv}% </h2>
-                <p class="tagline"> "${beer.tagline}" </p>
-                <p class="description"> ${beer.description} </p>
-                <h3> Food pairings: </h3>
-                <ul>
-                    <li>${beer.food_pairing[0]}</li>
-                    <li>${beer.food_pairing[1]}</li>
-                    <li>${beer.food_pairing[2]}</li>
-                </ul>
-            </div>
+                <div class="beerInfo">
+                    <img src="${beer.image_url}" alt="${beer.name}" />
+                    <h2> ${beer.name} ${beer.abv}% </h2>
+                    <p class="tagline"> "${beer.tagline}" </p>
+                    <p class="description"> ${beer.description} </p>
+                    <h3> Food pairings: </h3>
+                    <ul>
+                        <li>${beer.food_pairing[0]}</li>
+                        <li>${beer.food_pairing[1]}</li>
+                        <li>${beer.food_pairing[2]}</li>
+                    </ul>
+                </div>
             `;
         }
     }
@@ -108,18 +108,18 @@ thirdABV.addEventListener('click', function () {
          * to 7, less than 12 and doesn't have the keg.png image */
         if (beer.abv >= 7 && beer.abv <= 12 && beer.image_url != "https://images.punkapi.com/v2/keg.png") {
             htmlBlock += `
-            <div class="beerInfo">
-                <img src="${beer.image_url}" alt="${beer.name}" />
-                <h2> ${beer.name} ${beer.abv}% </h2>
-                <p class="tagline"> "${beer.tagline}" </p>
-                <p class="description"> ${beer.description} </p>
-                <h3> Food pairings: </h3>
-                <ul>
-                    <li>${beer.food_pairing[0]}</li>
-                    <li>${beer.food_pairing[1]}</li>
-                    <li>${beer.food_pairing[2]}</li>
-                </ul>
-            </div>
+                <div class="beerInfo">
+                    <img src="${beer.image_url}" alt="${beer.name}" />
+                    <h2> ${beer.name} ${beer.abv}% </h2>
+                    <p class="tagline"> "${beer.tagline}" </p>
+                    <p class="description"> ${beer.description} </p>
+                    <h3> Food pairings: </h3>
+                    <ul>
+                        <li>${beer.food_pairing[0]}</li>
+                        <li>${beer.food_pairing[1]}</li>
+                        <li>${beer.food_pairing[2]}</li>
+                    </ul>
+                </div>
             `;
         }
     }
@@ -133,18 +133,18 @@ fourthABV.addEventListener('click', function () {
          * to 12 and doesn't have the keg.png image */
         if (beer.abv >= 12 && beer.image_url != "https://images.punkapi.com/v2/keg.png") {
             htmlBlock += `
-            <div class="beerInfo">
-                <img src="${beer.image_url}" alt="${beer.name}" />
-                <h2> ${beer.name} ${beer.abv}% </h2>
-                <p class="tagline"> "${beer.tagline}" </p>
-                <p class="description"> ${beer.description} </p>
-                <h3> Food pairings: </h3>
-                <ul>
-                    <li>${beer.food_pairing[0]}</li>
-                    <li>${beer.food_pairing[1]}</li>
-                    <li>${beer.food_pairing[2]}</li>
-                </ul>
-            </div>
+                <div class="beerInfo">
+                    <img src="${beer.image_url}" alt="${beer.name}" />
+                    <h2> ${beer.name} ${beer.abv}% </h2>
+                    <p class="tagline"> "${beer.tagline}" </p>
+                    <p class="description"> ${beer.description} </p>
+                    <h3> Food pairings: </h3>
+                    <ul>
+                        <li>${beer.food_pairing[0]}</li>
+                        <li>${beer.food_pairing[1]}</li>
+                        <li>${beer.food_pairing[2]}</li>
+                    </ul>
+                </div>
             `;
         }
     }
@@ -157,18 +157,18 @@ showAll.addEventListener('click', function () {
         // Loops out all beers that doesn't have the keg.png image
         if (beer.image_url != "https://images.punkapi.com/v2/keg.png") {
             htmlBlock += `
-            <div class="beerInfo">
-                <img src="${beer.image_url}" alt="${beer.name}" />
-                <h2> ${beer.name} ${beer.abv}% </h2>
-                <p class="tagline"> "${beer.tagline}" </p>
-                <p class="description"> ${beer.description} </p>
-                <h3> Food pairings: </h3>
-                <ul>
-                    <li>${beer.food_pairing[0]}</li>
-                    <li>${beer.food_pairing[1]}</li>
-                    <li>${beer.food_pairing[2]}</li>
-                </ul>
-            </div>
+                <div class="beerInfo">
+                    <img src="${beer.image_url}" alt="${beer.name}" />
+                    <h2> ${beer.name} ${beer.abv}% </h2>
+                    <p class="tagline"> "${beer.tagline}" </p>
+                    <p class="description"> ${beer.description} </p>
+                    <h3> Food pairings: </h3>
+                    <ul>
+                        <li>${beer.food_pairing[0]}</li>
+                        <li>${beer.food_pairing[1]}</li>
+                        <li>${beer.food_pairing[2]}</li>
+                    </ul>
+                </div>
             `;
         }
     }
@@ -189,12 +189,17 @@ searchFood.addEventListener('change', function(){
     } else {
         for (let beer of globalBeerList) {
             // Loops through the food pairing array
+            let pairingFound = false;
             for (let foodPairing of beer.food_pairing) {
-                /* Checks if the search value exists in the food pairing array
-                 * and then loops out the matching values */
-                if(foodPairing.toLowerCase().includes(searchValue) &&
-                beer.image_url != "https://images.punkapi.com/v2/keg.png") {
-                    htmlBlock += `
+                if (foodPairing.toLowerCase().includes(searchValue)) {
+                pairingFound = true;
+                }
+            }
+            if (
+                pairingFound &&
+                beer.image_url != 'https://images.punkapi.com/v2/keg.png'
+            ) {
+                htmlBlock += `
                     <div class="beerInfo">
                         <img src="${beer.image_url}" alt="${beer.name}" />
                         <h2> ${beer.name} ${beer.abv}% </h2>
@@ -207,8 +212,7 @@ searchFood.addEventListener('change', function(){
                             <li>${beer.food_pairing[2]}</li>
                         </ul>
                     </div>
-                    `;
-                }
+                `;
             }
         }
     }
