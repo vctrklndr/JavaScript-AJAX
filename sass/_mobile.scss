@@ -76,9 +76,10 @@ main {
         width: 100%;
         max-width: 300px;
         height: 30px;
-        font-family: 'Roboto mono', monospace;
+        font-family: 'Roboto', sans-serif;
         font-size: 1rem;
         font-weight: 300;
+        letter-spacing: .08rem;
         border: 0;
         border-radius: 25px;   
     }

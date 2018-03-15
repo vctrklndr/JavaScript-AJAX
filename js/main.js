@@ -175,12 +175,12 @@ showAll.addEventListener('click', function () {
     beerWrapper.innerHTML = htmlBlock;
 })
 
-searchFood.addEventListener('change', function(){
+searchFood.addEventListener('change', function () {
     const searchValue = searchFood.value.toLowerCase();
     let htmlBlock = '';
     /* If input field is sent with a blank space or if input
      * string length is less than 4 a error message is sent */
-    if(searchValue === " " | searchValue.length < 4){
+    if (searchValue === " " | searchValue.length < 4) {
         htmlBlock += `
         <div class="notAllowed">
             <p> Please search with at least 4 characters </p>
@@ -192,7 +192,7 @@ searchFood.addEventListener('change', function(){
             let pairingFound = false;
             for (let foodPairing of beer.food_pairing) {
                 if (foodPairing.toLowerCase().includes(searchValue)) {
-                pairingFound = true;
+                    pairingFound = true;
                 }
             }
             if (

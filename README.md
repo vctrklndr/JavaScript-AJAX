@@ -18,6 +18,10 @@ After managing to get the API visible in the DOM I started to do different selec
 
 Wasn't really satisfied with just sorting the beers by ABV, so I added an input field where you can search on food pairings.
 
+### `Improvements`
+- Fix so all the htmlBlocks isn't repeated for every eventListener
+- Better variable names for the ABV-buttons
+
 ### `To dos` :clipboard:
 - Add an error message if the search value doesn't match any food pairing
 - Manage to sort the ABV ascending / descending
