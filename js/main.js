@@ -180,10 +180,10 @@ searchFood.addEventListener('change', function () {
     let htmlBlock = '';
     /* If input field is sent with a blank space or if input
      * string length is less than 4 a error message is sent */
-    if (searchValue === " " | searchValue.length < 4) {
+    if (searchValue === " " | searchValue.length < 3) {
         htmlBlock += `
         <div class="notAllowed">
-            <p> Please search with at least 4 characters </p>
+            <p> Please search with at least 3 characters </p>
         </div>
         `;
     } else {
